@@ -1,0 +1,50 @@
+<RelativeLayout 
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/gallerylayout"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent" 
+  android:background="@color/white">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
+	
+   
+	    
+   <LinearLayout android:id="@+id/buttonCotrolLayout" 
+       android:layout_width="fill_parent"
+ 			android:layout_height="150dp" 
+ 			android:orientation="horizontal"
+ 			android:layout_alignParentBottom="true"
+ 			android:background="@drawable/green_login_footer"
+ 			android:gravity="center_horizontal">
+	    <Button
+	        android:id="@+id/button1"
+	        android:layout_width="125dp"
+	   		android:layout_height="40dp"
+	        android:text="@string/login"
+	        android:textColor="@color/white"
+	        android:textStyle="bold"
+	        android:onClick="showLoginView"
+	        android:layout_gravity="center_horizontal|center_vertical"
+	        android:background="@drawable/login_btn" />
+    </LinearLayout>
+    
+   <LinearLayout android:id="@+id/gallery_paging1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonCotrolLayout"
+        android:layout_marginBottom="45dp">
+
+	    <com.emeals.pagerindicator.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         />
+	    
+	</LinearLayout>
+		
+</RelativeLayout>

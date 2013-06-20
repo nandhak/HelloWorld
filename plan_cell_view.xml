@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/planCellView"
+    android:layout_width="match_parent"
+    android:layout_height="275dip"
+    android:layout_marginTop="30dip"
+    android:background="@drawable/plan_cell_view" >
+    <RelativeLayout 
+	    android:id="@+id/detailsView"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent">
+
+	    <ImageView
+	        android:id="@+id/planImage"
+	        android:layout_width="104dip"
+	        android:layout_height="100dip"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginLeft="43dp"
+	        android:scaleType="fitXY"
+	        android:adjustViewBounds="true"
+	        android:src="@drawable/plan_vegetarian" />
+	
+	    <TextView
+	        android:id="@+id/planName"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="37dip"
+	        android:textColor="@color/white"
+	        android:textStyle="bold"
+	        android:layout_toRightOf="@+id/planImage"
+	        android:textSize="20sp" />
+	
+	    <TextView
+	        android:id="@+id/thisWeekHeader"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/planImage"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="70dp"
+	        android:text="THIS WEEK"
+	        android:textStyle="bold"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textSize="18sp" />
+	
+	   
+	
+	    <TextView
+	        android:id="@+id/lastWeekHeader"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/thisWeekHeader"
+	        android:layout_alignBottom="@+id/thisWeekHeader"
+	        android:layout_alignRight="@+id/planName"
+	        android:layout_marginRight="80dp"
+	        android:text="LAST WEEK"
+	        android:textStyle="bold"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textSize="18sp" />
+	
+	    <View
+	        android:id="@+id/thisWeekView"
+	        android:layout_width="125dip"
+	        android:layout_height="63dip"
+	        android:layout_marginTop="9dip"
+	        android:layout_marginLeft="7dip"
+	        android:layout_alignLeft="@+id/planImage"
+	        android:layout_below="@+id/thisWeekHeader"
+	        android:onClick="showMenuPlan"
+	        />
+	    <View
+	        android:id="@+id/lastWeekView"
+	        android:layout_width="125dip"
+	        android:layout_height="63dip"
+	        android:layout_alignTop="@+id/thisWeekView"
+	        android:layout_marginLeft="6dp"
+	        android:layout_toRightOf="@+id/thisWeekView"
+	        android:onClick="showMenuPlan"
+	         />
+	
+	    <TableLayout
+	        android:layout_width="180dip"
+	        android:layout_height="93dip"
+	        android:layout_marginTop="9dip"
+	        android:layout_marginLeft="17dip"
+	        android:layout_alignLeft="@+id/planImage"
+	        android:layout_below="@+id/thisWeekHeader"
+	        android:stretchColumns="0,1" >
+	
+	        <TableRow
+	            android:id="@+id/tableRow1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="20dp"
+	            >
+	
+	            <TextView
+	                android:id="@+id/thisWeekBeginDate"
+	                android:layout_width="40dip"
+	                android:layout_height="wrap_content"
+	                android:layout_marginTop="5dp"
+	                android:gravity="center"
+	                android:text="20"
+	                android:layout_marginLeft="5dp"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+	                android:textColor="@color/gray"
+	                android:textSize="24sp"
+	                android:textStyle="bold"
+	                android:layout_column="0" />
+	        
+	             <TextView
+	        		android:id="@+id/thisWeekEndDate"
+	         		android:layout_width="40dip"
+	                android:layout_height="wrap_content"
+	                android:layout_marginTop="5dp"
+	                android:layout_marginLeft="50dp"
+	                android:gravity="center"
+	                android:text="26"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+	                android:textColor="@color/gray"
+	                android:textSize="24sp"
+	                android:textStyle="bold"
+	                android:layout_column="1" />
+	            
+	        </TableRow>
+	
+	        <TableRow
+	            android:id="@+id/tableRow2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="5dp" >
+	           
+	            <TextView
+			        android:id="@+id/thisWeekBeginMonth"
+			        android:layout_width="20dip"
+			        android:layout_height="wrap_content"
+			        android:gravity="center"
+			        android:text="MAR"
+			        android:textSize="12sp"
+			        android:layout_marginLeft="5dp"
+			        android:layout_marginBottom="5dp"
+			        android:textAppearance="?android:attr/textAppearanceMedium"
+			        android:textColor="@color/gray"
+			        android:textStyle="bold"
+			        android:layout_column="0" />
+	            
+	            <TextView
+			        android:id="@+id/thisWeekEndMonth"
+			        android:layout_width="20dip"
+			        android:layout_height="wrap_content"
+			        android:gravity="center"
+			        android:text="MAR"
+			        android:textSize="12sp"
+			        android:layout_marginLeft="50dp"
+			        android:layout_marginBottom="5dp"
+			        android:textAppearance="?android:attr/textAppearanceMedium"
+			        android:textColor="@color/gray"
+			        android:textStyle="bold"
+			        android:layout_column="1" />
+	        </TableRow>
+	    </TableLayout>
+	    
+	    <TableLayout
+	        android:id="@+id/View01"
+	        android:layout_width="180dip"
+	        android:layout_height="93dip"
+	        android:layout_alignTop="@+id/thisWeekView"
+	        android:layout_marginLeft="100dp"
+	        android:layout_toRightOf="@+id/thisWeekView"
+	        android:stretchColumns="0,1" >
+	
+	        <TableRow
+	            android:id="@+id/tableRow3"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="20dp" >
+	
+	            <TextView
+	                android:id="@+id/lastWeekBeginDate"
+	                android:layout_width="40dip"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="3dp"
+	                android:layout_marginRight="18dp"
+	                android:layout_marginTop="5dp"
+	                android:gravity="center"
+	                android:text="13"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+	                android:textColor="@color/gray"
+	                android:textSize="24sp"
+	                android:textStyle="bold"
+	                android:layout_column="0" />
+	        
+	             <TextView
+	       			 android:id="@+id/lastWeekEndDate"
+	         		android:layout_width="40dip"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="12dp"
+	                android:layout_marginRight="8dp"
+	                android:layout_marginTop="5dp"
+	                android:gravity="center"
+	                android:text="19"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+	                android:textColor="@color/gray"
+	                android:textSize="24sp"
+	                android:textStyle="bold"
+	                android:layout_column="1" />
+	            
+	        </TableRow>
+	
+	        <TableRow
+	            android:id="@+id/tableRow4"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" >
+	            <TextView
+			        android:id="@+id/lastWeekBeginMonth"
+			        android:layout_width="20dip"
+			        android:layout_height="wrap_content"
+			        android:gravity="center"
+			        android:text="MAR"
+			        android:textSize="12sp"
+			        android:layout_marginRight="14dp"
+			        android:layout_marginBottom="5dp"
+			        android:textAppearance="?android:attr/textAppearanceMedium"
+			        android:textColor="@color/gray"
+			        android:textStyle="bold"
+			        android:layout_column="0" />
+	            
+	            <TextView
+			        android:id="@+id/lastWeekEndMonth"
+			        android:layout_width="40dip"
+			        android:layout_height="wrap_content"
+			        android:gravity="center"
+			        android:text="MAR"
+			        android:textSize="12sp"
+			        android:layout_marginBottom="5dp"
+			        android:layout_marginLeft="5dp"
+			        android:textAppearance="?android:attr/textAppearanceMedium"
+			        android:textColor="@color/gray"
+			        android:textStyle="bold"
+			        android:layout_column="1" />
+	        </TableRow>
+	    </TableLayout>
+	</RelativeLayout>
+	<ImageView
+        android:id="@+id/newMenuIndicator"
+        android:layout_width="54dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="43dp"
+        android:src="@drawable/new_menu"
+        android:contentDescription="@string/app_name" />
+</RelativeLayout>
